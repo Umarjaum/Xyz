@@ -11,5 +11,11 @@
     { "src": "/api/metadata", "dest": "/api/metadata.js" },
     { "src": "/api/sitemap", "dest": "/api/sitemap.js" },
     { "src": "/api/render", "dest": "/api/render.js" }
-  ]
+  ],
+  "functions": {
+    "api/source.js": { "memory": 512, "maxDuration": 10 },
+    "api/metadata.js": { "memory": 512, "maxDuration": 10 },
+    "api/sitemap.js": { "memory": 512, "maxDuration": 10 },
+    "api/render.js": { "memory": 1024, "maxDuration": 15 }
+  }
 }
