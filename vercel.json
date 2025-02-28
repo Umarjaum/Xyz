@@ -1,21 +1,15 @@
 {
   "version": 2,
   "builds": [
-    { "src": "api/source.js", "use": "@vercel/node" },
-    { "src": "api/metadata.js", "use": "@vercel/node" },
-    { "src": "api/sitemap.js", "use": "@vercel/node" },
-    { "src": "api/render.js", "use": "@vercel/node" }
+    { "src": "source.js", "use": "@vercel/node" },
+    { "src": "metadata.js", "use": "@vercel/node" },
+    { "src": "sitemap.js", "use": "@vercel/node" },
+    { "src": "render.js", "use": "@vercel/node" }
   ],
   "routes": [
-    { "src": "/api/source", "dest": "/api/source.js" },
-    { "src": "/api/metadata", "dest": "/api/metadata.js" },
-    { "src": "/api/sitemap", "dest": "/api/sitemap.js" },
-    { "src": "/api/render", "dest": "/api/render.js" }
-  ],
-  "functions": {
-    "api/source.js": { "memory": 1024, "maxDuration": 20 },
-    "api/metadata.js": { "memory": 1024, "maxDuration": 10 },
-    "api/sitemap.js": { "memory": 1024, "maxDuration": 10 },
-    "api/render.js": { "memory": 1024, "maxDuration": 15 }
-  }
+    { "src": "/api/source", "dest": "/source.js" },
+    { "src": "/api/metadata", "dest": "/metadata.js" },
+    { "src": "/api/sitemap", "dest": "/sitemap.js" },
+    { "src": "/api/render", "dest": "/render.js" }
+  ]
 }
