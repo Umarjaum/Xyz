@@ -1,15 +1,15 @@
 {
   "version": 2,
+  "builds": [
+    { "src": "api/source.js", "use": "@vercel/node" },
+    { "src": "api/metadata.js", "use": "@vercel/node" },
+    { "src": "api/sitemap.js", "use": "@vercel/node" },
+    { "src": "api/render.js", "use": "@vercel/node" }
+  ],
   "routes": [
     { "src": "/api/source", "dest": "/api/source.js" },
     { "src": "/api/metadata", "dest": "/api/metadata.js" },
     { "src": "/api/sitemap", "dest": "/api/sitemap.js" },
     { "src": "/api/render", "dest": "/api/render.js" }
-  ],
-  "functions": {
-    "api/source.js": { "runtime": "nodejs18.x" },
-    "api/metadata.js": { "runtime": "nodejs18.x" },
-    "api/sitemap.js": { "runtime": "nodejs18.x" },
-    "api/render.js": { "runtime": "nodejs18.x" }
-  }
+  ]
 }
